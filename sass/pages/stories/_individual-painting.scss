@@ -1,0 +1,16 @@
+.painting-collection {
+  .copy-container {
+    background-color: color('white');
+    margin-left: 8%;
+
+    .header {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .collection-container {
+    height: 75vh;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}

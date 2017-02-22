@@ -1,0 +1,61 @@
+{# ------------------------------------------------------- #}
+{# INDIVIDUAL VIEW FOR EACH stories #}
+{# This page can use any data from http:localhost:2000/cms/#/form/stories/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this stories's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ item.name }}{% endblock %}
+
+
+{% block content %}
+{% if item.type === 'photography' %}
+  <div class="photo-story">
+    <div class="content-wrapper">
+      <div class="copy-container col-2 pr2 pt2">
+        <div class="header">
+          <h3>{{item.name}}</h3>
+          <h5 class="js_grid-trigger">GRID</h5>
+          <h5 class="js_slider-trigger">SLIDER</h5>
+        </div>
+        <p>{{item.story_description}}</p>
+      </div>
+      <div class="gallery-container slider-view col-10">
+        {% for image in item.gallery %}
+          <div class="story-image-container">
+            <a href={{image.url}} class="lightbox">
+              <img class="story-image" src="{{ image.url}}">
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% elseif item.type === 'painting' %}
+  <div class="painting-collection">
+    <div class="flex">
+      <div class="copy-container col-2 pr2 pt2">
+        <div class="header">
+          <h3>{{item.name}}</h3>
+        </div>
+        <p>{{item.story_description}}</p>
+      </div>
+      <div class="collection-container col-10">
+        {% for image in item.gallery %}
+          <div class="collection-image-container height-100 inline-block mr2">
+            <img class="collection-image height-100 inline-block" src="{{ image.url}}">
+            <div class="image-caption">
+              <p>{{image.caption}}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

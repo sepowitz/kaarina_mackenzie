@@ -1,0 +1,65 @@
+.index {
+  min-height: 70vh;
+
+  .story-block-container {
+    .overlay {
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -40%);
+      opacity: 0;
+      visibility: hidden;
+      color: white;
+      .story-name {
+        opacity: 0;
+        transition: 250ms ease-in-out;
+        transition-delay: 200ms;
+      }
+      .story-link {
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+        transition-delay: 250ms;
+        border-bottom: solid 1px color('white');
+        padding-bottom: 2px;
+        width: 72px;
+        a {
+          font-weight: light;
+          text-decoration: none;
+          color: color('white');
+          transition: 200ms ease-in-out;
+        }
+        &:hover {
+          border-color: color('yellow');
+          a {
+            color: color('yellow');
+          }
+        }
+      }
+    }
+
+    .story-block {
+      min-height: 40vh;
+      transition: 200ms ease;
+    }
+
+    &:hover{
+      .story-block {
+        filter: blur(2px);
+      }
+
+      .overlay {
+        opacity: 1;
+        visibility: visible;
+        filter: none !important;
+
+        .story-name {
+          opacity: 1;
+          transform: translateX(-10%);
+        }
+        .story-link {
+          opacity: 1;
+          transform: translateX(-10%);
+        }
+      }
+    }
+  }
+}

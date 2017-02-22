@@ -1,0 +1,16 @@
+@import './normalize';
+@import './variables';
+@import './fonts';
+@import './colors';
+@import './utils';
+@import './globals';
+
+//Partials
+@import './partials/header';
+
+//Pages
+@import './pages/index';
+
+//Stories
+@import './pages/stories/individual-photo';
+@import './pages/stories/individual-painting';

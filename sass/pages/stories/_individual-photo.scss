@@ -1,0 +1,52 @@
+.photo-story {
+  .content-wrapper {
+    .gallery-container {
+      width: 100%;
+      .story-image-container > img {
+        width: 100%;
+      }
+    }
+    @media (min-width: $md) {
+      display: flex;
+      .gallery-container {
+        &.slider-view { /* Horizontal slider view */
+          height: 75vh;
+          overflow: auto;
+          white-space: nowrap;
+          .story-image-container {
+            width: auto;
+            height: 100%;
+            display: inline-block;
+            margin-right: 1rem;
+            .story-image {
+              display: inline-block;
+              width: auto;
+              height: 100%;
+            }
+          }
+        }
+
+        &.grid-view { /* Standard grid view */
+          display: flex;
+          flex-flow: row wrap;
+          flex-direction: flex-column;
+          .story-image-container {
+            flex: auto;
+            .story-image {
+              height: 30vh;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy-container {
+    background-color: color('white');
+    margin-left: 8%;
+
+    .header {
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+
+{% set photos = cms.stories|where('type', 'photography') %}
+{% set paintings = cms.stories|where('type', 'painting') %}
+
+<header class="header py4 bg-white z1">
+  <div class="clearfix">
+    <div class="col-10 md-col-11 mx-auto">
+      <nav class="clearfix">
+        <div class="col col-7 relative">
+          <a href="/">
+          <h1 class="m0 align-middle">Kaarina Mackenzie</h1>
+          </a>
+        </div>
+        <div class="dropdown-trigger pointer col col-1 center relative">
+          <h4 class="nav-item m0 align-middle pointer rubik-regular">Photography</h4>
+          <div class="dropdown border absolute mt1 bg-white">
+            <ul>
+              {% for photo in photos %}
+                <li><a href="{{url(photo)}}">{{photo.name}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-trigger pointer col col-1 center relative">
+          <h4 class="nav-item m0 align-middle rubik-regular">Painting</h4>
+          <div class="dropdown border absolute mt1 bg-white">
+            <ul>
+              {% for painting in paintings %}
+                <li><a href="{{url(painting)}}">{{painting.name}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-trigger pointer col col-1 center relative">
+          <h4 class="nav-item m0 align-middle rubik-regular">Illustration</h4>
+          <div class="dropdown border absolute mt1 bg-white">
+            <ul>
+              <li>Burma</li>
+              <li>Bhutan</li>
+              <li>Beijing</li>
+              <li>Colombia</li>
+              <li>Shangri La</li>
+              <li>Shanghai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown-trigger pointer col col-1 center relative">
+          <h4 class="nav-item m0 align-middle rubik-regular">Projects</h4>
+          <div class="dropdown border absolute mt1 bg-white">
+            <ul>
+              <li>Burma</li>
+              <li>Bhutan</li>
+              <li>Beijing</li>
+              <li>Colombia</li>
+              <li>Shangri La</li>
+              <li>Shanghai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact nav-item pointer col col-1 center">
+          <a href="#">
+            <h4 class="m0 align-middle rubik-regular">Contact</h4>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

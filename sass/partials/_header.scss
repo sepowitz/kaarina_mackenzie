@@ -1,0 +1,61 @@
+$dropdown-transition: 250ms;
+.header {
+
+  .chinese-name {
+    top: 10px;
+    left: -25px;
+  }
+
+  .dropdown-trigger {
+    &:hover {
+      color: color('yellow');
+      .dropdown {
+        color: color('black');
+        li {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    transition: $dropdown-transition ease-in-out;
+    a {
+      &:hover {
+        color: color('yellow');
+      }
+    }
+  }
+
+  .dropdown {
+    min-width: 100px;
+    z-index: 2;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    border: solid 2px color('black');
+    right: 0;
+    border-radius: 1px;
+    transition: $dropdown-transition ease-in-out;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: .5rem;
+        opacity: 0;
+        transition: $dropdown-transition ease-in-out;
+      }
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      height: 200px;
+      li {
+        opacity: 1;
+        transition-delay: $dropdown-transition;
+      }
+    }
+  }
+}
