@@ -2,6 +2,9 @@
 'use strict';
 
 var $galleryContainer = $('.gallery-container');
+var $mobileNav = $('.mobile-nav');
+var $navTrigger = $('.js_nav-trigger');
+var $body = $('body');
 
 (function ($) {
   $('.lightbox').swipebox();
@@ -34,6 +37,13 @@ $('.js_slider-trigger').on('click', function () {
     $galleryContainer.removeClass('grid-view').addClass('slider-view');
   }
   return;
+});
+
+$navTrigger.on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $mobileNav.toggleClass('active');
+  $body.toggleClass('no-scroll');
 });
 
 },{}]},{},[1]);

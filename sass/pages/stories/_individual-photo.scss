@@ -2,7 +2,7 @@
   .content-wrapper {
     .gallery-container {
       width: 100%;
-      .story-image-container > img {
+      .story-image-container img {
         width: 100%;
       }
     }
@@ -10,7 +10,7 @@
       display: flex;
       .gallery-container {
         &.slider-view { /* Horizontal slider view */
-          height: 75vh;
+          height: 88vh;
           overflow: auto;
           white-space: nowrap;
           .story-image-container {
@@ -27,13 +27,13 @@
         }
 
         &.grid-view { /* Standard grid view */
-          display: flex;
-          flex-flow: row wrap;
-          flex-direction: flex-column;
           .story-image-container {
-            flex: auto;
+            float: left;
+            height: 30vh;
+            margin: 0.5rem;
+
             .story-image {
-              height: 30vh;
+              height: 100%;
               width: auto;
             }
           }

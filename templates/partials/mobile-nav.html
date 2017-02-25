@@ -1,0 +1,51 @@
+{% set photos = cms.stories|where('type', 'photography') %}
+{% set paintings = cms.stories|where('type', 'painting') %}
+
+<div class="mobile-nav">
+  <!-- Scroll Container -->
+  <div class="mobile-nav-container pt2">
+
+    <div class="my4">
+      <h2 class="center mb1">PHOTOGRAPHY</h2>
+      <div class="nav-section mx-auto col-10 flex">
+        {% for photo in photos %}
+          <div class="nav-section-wrapper pb2 col-4 flex">
+            <a href="{{url(photo)}}">
+              <img src="{{ photo.display_image|imageCrop(100, 100) }}" />
+              <h5 class="center">{{photo.name}}</h5>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="my4">
+      <h2 class="center mb1">PHOTOGRAPHY</h2>
+      <div class="nav-section mx-auto col-10 flex">
+        {% for photo in photos %}
+          <div class="nav-section-wrapper pb2 col-4 flex">
+            <a href="{{url(photo)}}">
+              <img src="{{ photo.display_image|imageCrop(100, 100) }}" />
+              <h5 class="center">{{photo.name}}</h5>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="my4">
+      <h2 class="center mb1">PHOTOGRAPHY</h2>
+      <div class="nav-section mx-auto col-10 flex">
+        {% for photo in photos %}
+          <div class="nav-section-wrapper pb2 col-4 flex">
+            <a href="{{url(photo)}}">
+              <img src="{{ photo.display_image|imageCrop(100, 100) }}" />
+              <h5 class="center">{{photo.name}}</h5>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>

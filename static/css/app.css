@@ -543,6 +543,30 @@ th {
   height: 100%;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+
+.z4 {
+  z-index: 4;
+}
+
+.z5 {
+  z-index: 5;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
@@ -568,6 +592,71 @@ body {
 @media (min-width: 64em) {
   .header .logo {
     font-size: 1.8rem;
+  }
+}
+.header .nav-large {
+  display: none;
+}
+@media (min-width: 40em) {
+  .header .nav-large {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.header .nav-small {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .nav-small .nav-trigger {
+  width: 25px;
+  height: 20px;
+}
+.header .nav-small .nav-trigger .line {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+.header .nav-small .nav-trigger .line.top {
+  top: 0;
+  transition: 100ms ease-out;
+}
+.header .nav-small .nav-trigger .line.middle {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: 100ms ease-out;
+}
+.header .nav-small .nav-trigger .line.bottom {
+  bottom: 0;
+  transition: 100ms ease-out;
+}
+.header .nav-small .nav-trigger.active .top {
+  -webkit-transform: rotate(47deg);
+      -ms-transform: rotate(47deg);
+          transform: rotate(47deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  top: 52%;
+}
+.header .nav-small .nav-trigger.active .middle {
+  width: 0;
+}
+.header .nav-small .nav-trigger.active .bottom {
+  -webkit-transform: rotate(-47deg);
+      -ms-transform: rotate(-47deg);
+          transform: rotate(-47deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  bottom: 41%;
+}
+@media (min-width: 40em) {
+  .header .nav-small {
+    display: none;
   }
 }
 .header .nav-item {
@@ -625,6 +714,43 @@ body {
 .header .dropdown.active li {
   opacity: 1;
   transition-delay: 250ms;
+}
+
+.mobile-nav {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  background: white;
+  z-index: 1;
+  position: fixed;
+}
+.mobile-nav.active {
+  visibility: visible;
+  opacity: 1;
+}
+.mobile-nav .mobile-nav-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.mobile-nav .mobile-nav-container .nav-section {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.mobile-nav .mobile-nav-container .nav-section .nav-section-wrapper {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+@media (min-width: 52em) {
+  .mobile-nav {
+    display: none;
+  }
 }
 
 .index {
@@ -695,7 +821,7 @@ body {
 .photo-story .content-wrapper .gallery-container {
   width: 100%;
 }
-.photo-story .content-wrapper .gallery-container .story-image-container > img {
+.photo-story .content-wrapper .gallery-container .story-image-container img {
   width: 100%;
 }
 @media (min-width: 52em) {
@@ -706,7 +832,7 @@ body {
   }
   .photo-story .content-wrapper .gallery-container.slider-view {
     /* Horizontal slider view */
-    height: 75vh;
+    height: 88vh;
     overflow: auto;
     white-space: nowrap;
   }
@@ -723,23 +849,14 @@ body {
   }
   .photo-story .content-wrapper .gallery-container.grid-view {
     /* Standard grid view */
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-flex-direction: flex-column;
-        -ms-flex-direction: flex-column;
-            flex-direction: flex-column;
   }
   .photo-story .content-wrapper .gallery-container.grid-view .story-image-container {
-    -webkit-flex: auto;
-        -ms-flex: auto;
-            flex: auto;
+    float: left;
+    height: 30vh;
+    margin: 0.5rem;
   }
   .photo-story .content-wrapper .gallery-container.grid-view .story-image-container .story-image {
-    height: 30vh;
+    height: 100%;
     width: auto;
   }
 }
