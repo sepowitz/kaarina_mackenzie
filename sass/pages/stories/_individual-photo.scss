@@ -1,4 +1,122 @@
 .photo-story {
+
+  .icon-container {
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    left: 8%;
+    bottom: 10%;
+
+    .grid-icon {
+      width: 25px;
+      height: 25px;
+      position: relative;
+
+      &:hover {
+        .t-left-block {
+          background: black;
+          border-color: white;
+        }
+        .t-right-block {
+          background: black;
+          border-color: white;
+        }
+        .b-left-block {
+          background: black;
+          border-color: white;
+        }
+        .b-right-block {
+          background: black;
+          border-color: white;
+        }
+      }
+
+      .t-left-block {
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: solid 1px black;
+      }
+
+      .t-right-block {
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: solid 1px black;
+      }
+
+      .b-left-block {
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border: solid 1px black;
+      }
+
+      .b-right-block {
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: solid 1px black;
+      }
+    }
+
+    .slider-icon {
+      bottom: 100%;
+      position: relative;
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      right: 0;
+      margin-left: 2px;
+
+      &:hover {
+        .left-block {
+          background: black;
+          border-color: white;
+        }
+        .middle-block {
+          background: black;
+          border-color: white;
+        }
+        .right-block {
+          background: black;
+          border-color: white;
+        }
+      }
+
+      .left-block {
+        position: absolute;
+        height: 23px;
+        width: 7px;
+        left: 0;
+        border: solid 1px black;
+      }
+
+      .middle-block {
+        position: absolute;
+        height: 23px;
+        width: 7px;
+        left: 8px;
+        border: solid 1px black;
+      }
+
+      .right-block {
+        position: absolute;
+        height: 23px;
+        width: 7px;
+        left: 16px;
+        border: solid 1px black;
+      }
+    }
+  }
   .content-wrapper {
     .gallery-container {
       width: 100%;
@@ -9,6 +127,7 @@
     @media (min-width: $md) {
       display: flex;
       .gallery-container {
+        transition: 1s ease-in-out;
         &.slider-view { /* Horizontal slider view */
           height: 88vh;
           overflow: auto;
@@ -27,6 +146,7 @@
         }
 
         &.grid-view { /* Standard grid view */
+          transition: 1s ease-in-out;
           .story-image-container {
             float: left;
             height: 30vh;

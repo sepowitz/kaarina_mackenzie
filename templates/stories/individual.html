@@ -20,10 +20,21 @@
       <div class="copy-container col-2 pr2 pt2">
         <div class="header">
           <h3>{{item.name}}</h3>
-          <h5 class="js_grid-trigger">GRID</h5>
-          <h5 class="js_slider-trigger">SLIDER</h5>
         </div>
         <p>{{item.story_description}}</p>
+        <div class="icon-container">
+          <div class="js_grid-trigger grid-icon">
+            <div class="t-left-block"></div>
+            <div class="t-right-block"></div>
+            <div class="b-left-block"></div>
+            <div class="b-right-block"></div>
+          </div>
+          <div class="js_slider-trigger slider-icon">
+            <div class="left-block"></div>
+            <div class="middle-block"></div>
+            <div class="right-block"></div>
+          </div>
+        </div>
       </div>
       <div class="gallery-container slider-view col-10">
         {% for image in item.gallery %}

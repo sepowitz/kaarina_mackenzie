@@ -1,0 +1,30 @@
+#swipebox-overlay {
+  background-color: white !important;
+}
+
+#swipebox-close {
+  background: black !important;
+}
+
+#swipebox-bottom-bar {
+  height: 100% !important;
+  width: 100% !important;
+  opacity: 0 !important;
+  #swipebox-arrows {
+    #swipebox-prev {
+      position: absolute;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      &:hover { cursor: w-resize; }
+    }
+
+    #swipebox-next {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      &:hover { cursor: e-resize; }
+    }
+  }
+}
