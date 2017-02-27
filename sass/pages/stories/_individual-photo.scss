@@ -16,6 +16,29 @@
         .t-left-block {
           background: black;
           border-color: white;
+          transform: translate(-1px, -1px);
+        }
+        .t-right-block {
+          background: black;
+          border-color: white;
+          transform: translate(1px, -1px);
+        }
+        .b-left-block {
+          background: black;
+          border-color: white;
+          transform: translate(-1px, 1px);
+        }
+        .b-right-block {
+          background: black;
+          border-color: white;
+          transform: translate(1px, 1px);
+        }
+      }
+
+      &.active {
+        .t-left-block {
+          background: black;
+          border-color: white;
         }
         .t-right-block {
           background: black;
@@ -38,6 +61,7 @@
         left: 0;
         top: 0;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
 
       .t-right-block {
@@ -47,6 +71,7 @@
         right: 0;
         top: 0;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
 
       .b-left-block {
@@ -56,6 +81,7 @@
         left: 0;
         bottom: 0;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
 
       .b-right-block {
@@ -65,6 +91,7 @@
         right: 0;
         bottom: 0;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
     }
 
@@ -78,6 +105,23 @@
       margin-left: 2px;
 
       &:hover {
+        .left-block {
+          background: black;
+          border-color: white;
+          transform: translateX(-2px);
+        }
+        .middle-block {
+          background: black;
+          border-color: white;
+        }
+        .right-block {
+          background: black;
+          border-color: white;
+          transform: translateX(2px);
+        }
+      }
+
+      &.active {
         .left-block {
           background: black;
           border-color: white;
@@ -98,6 +142,7 @@
         width: 7px;
         left: 0;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
 
       .middle-block {
@@ -106,6 +151,7 @@
         width: 7px;
         left: 8px;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
 
       .right-block {
@@ -114,6 +160,7 @@
         width: 7px;
         left: 16px;
         border: solid 1px black;
+        transition: 200ms ease-in-out;
       }
     }
   }
