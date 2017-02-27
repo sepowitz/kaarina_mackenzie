@@ -7,14 +7,14 @@
     <nav class="nav-wrapper flex items-center justify-between">
       <div class="col-3 md-col-2 lg-col-3 relative">
         <a href="/">
-        <h1 class="logo m0 align-middle">Kaarina Mackenzie</h1>
+        <h1 class="logo m0 align-middle sans-medium">Kaarina Mackenzie</h1>
         </a>
       </div>
 
       <!-- Desktop/Tablet Nav -->
-      <div class="nav-large col-9 md-col-8 lg-col-7 flex items-center justify-between">
-        <div class="dropdown-trigger pointer col-2 center relative">
-          <h4 class="nav-item m0 align-middle pointer rubik-regular">Photography</h4>
+      <div class="nav-large col-9 md-col-6 flex items-center justify-between">
+        <div class="dropdown-trigger pointer col-3 center relative">
+          <h4 class="nav-item m0 align-middle pointer sans-light">Photography</h4>
           <div class="dropdown border absolute mt1 bg-white">
             <ul>
               {% for photo in photos %}
@@ -23,8 +23,8 @@
             </ul>
           </div>
         </div>
-        <div class="dropdown-trigger pointer col-2 center relative">
-          <h4 class="nav-item m0 align-middle rubik-regular">Painting</h4>
+        <div class="dropdown-trigger pointer col-3 center relative">
+          <h4 class="nav-item m0 align-middle sans-light">Painting</h4>
           <div class="dropdown border absolute mt1 bg-white">
             <ul>
               {% for painting in paintings %}
@@ -33,8 +33,8 @@
             </ul>
           </div>
         </div>
-        <div class="dropdown-trigger pointer col-2 center relative">
-          <h4 class="nav-item m0 align-middle rubik-regular">Illustration</h4>
+        <div class="dropdown-trigger pointer col-3 center relative">
+          <h4 class="nav-item m0 align-middle sans-light">Work</h4>
           <div class="dropdown border absolute mt1 bg-white">
             <ul>
               <li>Burma</li>
@@ -46,22 +46,9 @@
             </ul>
           </div>
         </div>
-        <div class="dropdown-trigger pointer col-2 center relative">
-          <h4 class="nav-item m0 align-middle rubik-regular">Projects</h4>
-          <div class="dropdown border absolute mt1 bg-white">
-            <ul>
-              <li>Burma</li>
-              <li>Bhutan</li>
-              <li>Beijing</li>
-              <li>Colombia</li>
-              <li>Shangri La</li>
-              <li>Shanghai</li>
-            </ul>
-          </div>
-        </div>
-        <div class="contact nav-item pointer col-2 center">
-          <a href="#">
-            <h4 class="m0 align-middle rubik-regular">Contact</h4>
+        <div class="contact nav-item pointer col-3 center">
+          <a href="/contact">
+            <h4 class="m0 align-middle sans-light">Contact</h4>
           </a>
         </div>
       </div>

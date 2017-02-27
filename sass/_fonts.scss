@@ -1,27 +1,21 @@
-$rubik-regular: Rubik, sans-serif;
-
-
-
-
-//Rubik Sans-serif
-.rubik-light { 
-  font-family: Rubik, sans-serif; 
+//Sans-serif: Proxima-nova
+.sans-light {
+  font-family: $proxima-nova;
+  font-weight: 200;
+}
+.sans-regular {
+  font-family: $proxima-nova;
   font-weight: 300;
 }
-.rubik-regular {
-  font-family: Rubik, sans-serif; 
+.sans-medium {
+  font-family: $proxima-nova;
   font-weight: 400;
 }
-.rubik-regular-italic {
-  font-family: Rubik, sans-serif; 
-  font-weight: 400;
-  font-style: italic;
-}
-.rubik-medium {
-  font-family: Rubik, sans-serif; 
-  font-weight: 500;
-}
-.rubik-bold { 
-  font-family: Rubik, sans-serif; 
+.sans-bold {
+  font-family: $proxima-nova;
   font-weight: 700;
+}
+.sans-black {
+  font-family: $proxima-nova;
+  font-weight: 800;
 }

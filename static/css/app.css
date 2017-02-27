@@ -393,30 +393,29 @@ th {
   padding: 0;
 }
 
-.rubik-light {
-  font-family: Rubik, sans-serif;
+.sans-light {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 200;
+}
+
+.sans-regular {
+  font-family: "proxima-nova", sans-serif;
   font-weight: 300;
 }
 
-.rubik-regular {
-  font-family: Rubik, sans-serif;
+.sans-medium {
+  font-family: "proxima-nova", sans-serif;
   font-weight: 400;
 }
 
-.rubik-regular-italic {
-  font-family: Rubik, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.rubik-medium {
-  font-family: Rubik, sans-serif;
-  font-weight: 500;
-}
-
-.rubik-bold {
-  font-family: Rubik, sans-serif;
+.sans-bold {
+  font-family: "proxima-nova", sans-serif;
   font-weight: 700;
+}
+
+.sans-black {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 800;
 }
 
 .white {
@@ -576,6 +575,12 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
 }
 
+p {
+  font-weight: 200;
+  letter-spacing: .06em;
+  line-height: 1.85;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -586,6 +591,7 @@ body {
   font-weight: 400;
 }
 
+/* Swipe Box */
 #swipebox-overlay {
   background-color: white !important;
 }
@@ -623,7 +629,7 @@ body {
 }
 @media (min-width: 64em) {
   .header .logo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 .header .nav-large {
@@ -692,11 +698,11 @@ body {
   }
 }
 .header .nav-item {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media (min-width: 64em) {
   .header .nav-item {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 .header .dropdown-trigger:hover {
@@ -848,6 +854,32 @@ body {
   -webkit-transform: translateX(-10%);
       -ms-transform: translateX(-10%);
           transform: translateX(-10%);
+}
+
+#contact {
+  min-height: 90vh;
+}
+@media (min-width: 52em) {
+  #contact .image-block, #contact .content-block {
+    min-height: 90vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+#contact .pic {
+  width: 100%;
+}
+@media (min-width: 52em) {
+  #contact .pic {
+    width: 75%;
+  }
 }
 
 .photo-story .icon-container {

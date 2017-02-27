@@ -1,0 +1,19 @@
+#contact {
+  min-height: 90vh;
+
+  .image-block, .content-block {
+    @media (min-width: $md) {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .pic {
+    width: 100%;
+    @media (min-width: $md) {
+      width: 75%;
+    }
+  }
+}

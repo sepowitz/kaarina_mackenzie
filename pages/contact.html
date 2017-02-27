@@ -1,0 +1,30 @@
+{# ------------------------------------------------------- #}
+{# ONE OFF VIEW contact #}
+{# This page can use any data from http:localhost:2000/cms/#/form/contact/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this contact's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.contact.name }}{% endblock %}
+{% block content %}
+  <div id="contact" class="col-10 mx-auto">
+    <div class="clearfix">
+      <div class="image-block col col-12 md-col-6">
+        <img class="pic" src="{{cms.contact.pic.url}}" />
+      </div>
+      <div class="content-block col col-12 md-col-6 lg-col-5">
+        <div class="content-wrapper">
+          <p class="sans-light mb3">{{cms.contact.description}}</p>
+          <h4 class="sans-light my1">{{cms.contact.email}}</h4>
+          <h4 class="sans-light my1">@{{cms.contact.handle}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
