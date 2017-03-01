@@ -1,5 +1,10 @@
 $dropdown-transition: 250ms;
-.header {
+.siteheader {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   .logo {
     font-size: 1.2rem;
     @media (min-width: $lg) {
