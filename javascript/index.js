@@ -1,4 +1,4 @@
-var $galleryContainer = $('.gallery-container');
+var $contentWrapper = $('.content-wrapper');
 var $mobileNav = $('.mobile-nav');
 var $navTrigger = $('.js_nav-trigger');
 var $body = $('body');
@@ -17,14 +17,14 @@ $('.dropdown-trigger').hover(function(){
 });
 
 $('.js_grid-trigger').on('click', function() {
-  if($galleryContainer.hasClass('grid-view')){ return; }
-  if($galleryContainer.hasClass('slider-view')) { $galleryContainer.removeClass('slider-view').addClass('grid-view');}
+  if($contentWrapper.hasClass('grid-view')){ return; }
+  if($contentWrapper.hasClass('slider-view')) { $contentWrapper.removeClass('slider-view').addClass('grid-view');}
   return;
 })
 
 $('.js_slider-trigger').on('click', function() {
-  if($galleryContainer.hasClass('slider-view')){ return; }
-  if($galleryContainer.hasClass('grid-view')) { $galleryContainer.removeClass('grid-view').addClass('slider-view');}
+  if($contentWrapper.hasClass('slider-view')){ return; }
+  if($contentWrapper.hasClass('grid-view')) { $contentWrapper.removeClass('grid-view').addClass('slider-view');}
   return;
 })
 
