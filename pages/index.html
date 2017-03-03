@@ -24,7 +24,7 @@
 {% block content %}
 <div class="index clearfix pt2">
   <div class="col-12 mx-auto">
-    <div class="clearfix p1">
+    <div class="clearfix">
       {% for story in stories| slice(0,6) %}
         <div class="story-block-container col col-12 sm-col-6 lg-col-4 center p1 pointer relative">
           <div class="story-block" style="background-image:url('{{story.display_image.url}}'); background-size: cover; background-position: 50% 50%;">

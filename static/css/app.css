@@ -591,6 +591,10 @@ body {
   font-weight: 400;
 }
 
+.main {
+  margin-top: 10vh;
+}
+
 /* Swipe Box */
 #swipebox-overlay {
   background-color: white !important;
@@ -630,6 +634,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  height: 10vh;
 }
 .siteheader .logo {
   font-size: 1.2rem;
@@ -797,10 +802,6 @@ body {
   }
 }
 
-.index {
-  margin-top: 9vh;
-  min-height: 70vh;
-}
 .index .story-block-container .overlay {
   top: 50%;
   left: 50%;
@@ -889,9 +890,6 @@ body {
   }
 }
 
-.photo-story {
-  margin-top: 10vh;
-}
 .photo-story .content-wrapper .gallery-container {
   width: 100%;
 }
