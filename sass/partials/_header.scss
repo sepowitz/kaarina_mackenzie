@@ -79,7 +79,7 @@ $dropdown-transition: 250ms;
     &:hover {
       color: color('yellow');
       .dropdown {
-        color: color('black');
+        color: color('midgrey');
         li {
           &:hover {
             text-decoration: underline;
@@ -107,21 +107,24 @@ $dropdown-transition: 250ms;
     opacity: 0;
     visibility: hidden;
     right: 0;
-    transition: $dropdown-transition ease-in-out;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 1rem;
     ul {
       list-style: none;
       padding: 0;
       li {
-        margin-bottom: .5rem;
+        padding: .25rem 0;
         opacity: 0;
         transition: $dropdown-transition ease-in-out;
+        a {
+          color: color('midgrey');
+        }
       }
     }
     &.active {
+      transition: $dropdown-transition ease-in-out;
       opacity: 1;
       visibility: visible;
-      height: 200px;
+      height: auto;
       li {
         opacity: 1;
         transition-delay: $dropdown-transition;

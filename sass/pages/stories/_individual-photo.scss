@@ -6,9 +6,26 @@
         width: 100%;
       }
     }
+
+    .copy-container {
+      @media (max-width: $md) {
+        width: 91.66667%;
+        margin-left: auto; margin-right: auto;
+        margin-top: 16vh;
+        margin-bottom: 2rem;
+      }
+    }
     @media (min-width: $md) {
       display: flex;
       &.slider-view {/* Horizontal slider view */
+        .copy-container {
+          @media (min-width: $md) {
+            margin-left: 5%;
+            padding-right: 2rem;
+            background-color: color('white');
+            margin-left: 20%;
+          }
+        }
         .gallery-container {
           height: 88vh;
           overflow: auto;
@@ -28,13 +45,27 @@
       }
 
       &.grid-view { /* Standard grid view */
+        min-height: 90vh;
         .left-content-block {
+
           position: fixed;
           left: 0;
           bottom: 0;
           top: 0;
+          .copy-container {
+            @media (min-width: $md) {
+              height: 100%;
+              margin-top: 10vh;
+              margin-left: 0;
+              padding-right: 2rem;
+              padding-left: 15%;
+              background-color: color('white');
+            }
+          }
         }
         .gallery-container {
+          @media (min-width: $md) { margin-left: 41.66667%; }
+          @media (min-width: $lg ) { margin-left: 33.33333%; }
           .story-image-container {
             float: left;
             height: 30vh;
@@ -49,23 +80,17 @@
       }
     }
   }
-  .copy-container {
-    background-color: color('white');
-    margin-left: 8%;
-
-    .header {
-      margin-bottom: 2rem;
-    }
-  }
 }
 
 //View Icons
 .icon-container {
+  bottom: 10%;
+  display: none;
+  @media (min-width: $md) { display: block; }
+
   width: 100px;
   height: 25px;
   position: absolute;
-  left: 8%;
-  bottom: 10%;
 
   .grid-icon {
     width: 25px;

@@ -586,6 +586,10 @@ a {
   color: black;
 }
 
+li {
+  letter-spacing: 0.12rem;
+}
+
 body {
   font-family: "proxima-nova";
   font-weight: 400;
@@ -601,7 +605,13 @@ body {
 }
 
 #swipebox-close {
-  background: black !important;
+  width: 40px !important;
+  height: 40px !important;
+  top: 10px !important;
+  right: 10px !important;
+  background-image: url(/static/images/ex-icon.png) !important;
+  background-size: 50% !important;
+  background-position: 50% 50% !important;
 }
 
 #swipebox-bottom-bar {
@@ -616,7 +626,7 @@ body {
   height: 100%;
 }
 #swipebox-bottom-bar #swipebox-arrows #swipebox-prev:hover {
-  cursor: w-resize;
+  cursor: url(/static/images/left-arrow-icon.png), auto !important;
 }
 #swipebox-bottom-bar #swipebox-arrows #swipebox-next {
   position: absolute;
@@ -625,7 +635,7 @@ body {
   height: 100%;
 }
 #swipebox-bottom-bar #swipebox-arrows #swipebox-next:hover {
-  cursor: e-resize;
+  cursor: url(/static/images/right-arrow-icon.png), auto !important;
 }
 
 .siteheader {
@@ -721,7 +731,7 @@ body {
   color: #FFBD00;
 }
 .siteheader .dropdown-trigger:hover .dropdown {
-  color: #000000;
+  color: #BABABA;
 }
 .siteheader .dropdown-trigger:hover .dropdown li:hover {
   text-decoration: underline;
@@ -743,22 +753,25 @@ body {
   opacity: 0;
   visibility: hidden;
   right: 0;
-  transition: 250ms ease-in-out;
-  padding: 0 1rem 2rem;
+  padding: 0 1rem 1rem;
 }
 .siteheader .dropdown ul {
   list-style: none;
   padding: 0;
 }
 .siteheader .dropdown ul li {
-  margin-bottom: .5rem;
+  padding: .25rem 0;
   opacity: 0;
   transition: 250ms ease-in-out;
 }
+.siteheader .dropdown ul li a {
+  color: #BABABA;
+}
 .siteheader .dropdown.active {
+  transition: 250ms ease-in-out;
   opacity: 1;
   visibility: visible;
-  height: 200px;
+  height: auto;
 }
 .siteheader .dropdown.active li {
   opacity: 1;
@@ -883,11 +896,16 @@ body {
 }
 #contact .pic {
   width: 100%;
+  padding-bottom: 2rem;
 }
 @media (min-width: 52em) {
   #contact .pic {
     width: 75%;
   }
+}
+#contact .email:hover, #contact .handle:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .photo-story .content-wrapper .gallery-container {
@@ -895,6 +913,15 @@ body {
 }
 .photo-story .content-wrapper .gallery-container .story-image-container img {
   width: 100%;
+}
+@media (max-width: 52em) {
+  .photo-story .content-wrapper .copy-container {
+    width: 91.66667%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16vh;
+    margin-bottom: 2rem;
+  }
 }
 @media (min-width: 52em) {
   .photo-story .content-wrapper {
@@ -905,6 +932,16 @@ body {
   .photo-story .content-wrapper.slider-view {
     /* Horizontal slider view */
   }
+}
+@media (min-width: 52em) and (min-width: 52em) {
+  .photo-story .content-wrapper.slider-view .copy-container {
+    margin-left: 5%;
+    padding-right: 2rem;
+    background-color: #ffffff;
+    margin-left: 20%;
+  }
+}
+@media (min-width: 52em) {
   .photo-story .content-wrapper.slider-view .gallery-container {
     height: 88vh;
     overflow: auto;
@@ -923,6 +960,7 @@ body {
   }
   .photo-story .content-wrapper.grid-view {
     /* Standard grid view */
+    min-height: 90vh;
   }
   .photo-story .content-wrapper.grid-view .left-content-block {
     position: fixed;
@@ -930,6 +968,28 @@ body {
     bottom: 0;
     top: 0;
   }
+}
+@media (min-width: 52em) and (min-width: 52em) {
+  .photo-story .content-wrapper.grid-view .left-content-block .copy-container {
+    height: 100%;
+    margin-top: 10vh;
+    margin-left: 0;
+    padding-right: 2rem;
+    padding-left: 15%;
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 52em) and (min-width: 52em) {
+  .photo-story .content-wrapper.grid-view .gallery-container {
+    margin-left: 41.66667%;
+  }
+}
+@media (min-width: 52em) and (min-width: 64em) {
+  .photo-story .content-wrapper.grid-view .gallery-container {
+    margin-left: 33.33333%;
+  }
+}
+@media (min-width: 52em) {
   .photo-story .content-wrapper.grid-view .gallery-container .story-image-container {
     float: left;
     height: 30vh;
@@ -940,20 +1000,18 @@ body {
     width: auto;
   }
 }
-.photo-story .copy-container {
-  background-color: #ffffff;
-  margin-left: 8%;
-}
-.photo-story .copy-container .header {
-  margin-bottom: 2rem;
-}
 
 .icon-container {
+  bottom: 10%;
+  display: none;
   width: 100px;
   height: 25px;
   position: absolute;
-  left: 8%;
-  bottom: 10%;
+}
+@media (min-width: 52em) {
+  .icon-container {
+    display: block;
+  }
 }
 .icon-container .grid-icon {
   width: 25px;

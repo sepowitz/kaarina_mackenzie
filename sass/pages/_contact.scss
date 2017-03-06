@@ -12,8 +12,16 @@
 
   .pic {
     width: 100%;
+    padding-bottom: 2rem;
     @media (min-width: $md) {
       width: 75%;
+    }
+  }
+
+  .email, .handle {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 }

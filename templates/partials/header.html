@@ -15,7 +15,7 @@
       <div class="nav-large col-9 md-col-6 flex items-center justify-between">
         <div class="dropdown-trigger pointer col-3 center relative">
           <h4 class="nav-item m0 align-middle pointer sans-light">Photography</h4>
-          <div class="dropdown border absolute mt1 bg-white">
+          <div class="dropdown absolute pt1 bg-white">
             <ul>
               {% for photo in photos %}
                 <li><a href="{{url(photo)}}">{{photo.name}}</a></li>
@@ -25,7 +25,7 @@
         </div>
         <div class="dropdown-trigger pointer col-3 center relative">
           <h4 class="nav-item m0 align-middle sans-light">Painting</h4>
-          <div class="dropdown border absolute mt1 bg-white">
+          <div class="dropdown absolute pt1 bg-white">
             <ul>
               {% for painting in paintings %}
                 <li><a href="{{url(painting)}}">{{painting.name}}</a></li>
@@ -35,7 +35,7 @@
         </div>
         <div class="dropdown-trigger pointer col-3 center relative">
           <h4 class="nav-item m0 align-middle sans-light">Work</h4>
-          <div class="dropdown border absolute mt1 bg-white">
+          <div class="dropdown absolute pt1 bg-white">
             <ul>
               <li>Burma</li>
               <li>Bhutan</li>

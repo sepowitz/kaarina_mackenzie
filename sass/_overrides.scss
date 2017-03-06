@@ -4,7 +4,13 @@
 }
 
 #swipebox-close {
-  background: black !important;
+  width: 40px !important;
+  height: 40px !important;
+  top: 10px !important;
+  right: 10px !important;
+  background-image: url(/static/images/ex-icon.png) !important;
+  background-size: 50% !important;
+  background-position: 50% 50% !important;
 }
 
 #swipebox-bottom-bar {
@@ -17,7 +23,7 @@
       left: 0;
       width: 50%;
       height: 100%;
-      &:hover { cursor: w-resize; }
+      &:hover { cursor: url(/static/images/left-arrow-icon.png), auto !important; }
     }
 
     #swipebox-next {
@@ -25,7 +31,7 @@
       right: 0;
       width: 50%;
       height: 100%;
-      &:hover { cursor: e-resize; }
+      &:hover { cursor: url(/static/images/right-arrow-icon.png), auto !important; }
     }
   }
 }
