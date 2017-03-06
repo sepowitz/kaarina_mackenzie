@@ -38,7 +38,7 @@
     <!-- build:css /static/css/minified.css -->
     <link rel="stylesheet" href="/static/css/app.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.min.css"/>
+    <link rel="stylesheet" href="/static/css/swipebox.css"/>
     <!-- endbuild -->
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
@@ -63,13 +63,10 @@
       {% include "templates/partials/footer.html" %}
 
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.min.js"></script>
+      <script src="/static/javascript/jquery.swipebox.min.js"></script>
       {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
-      {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
-
-      <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/app.js"></script>
-      <!-- endbuild -->
+      {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
       {% block scripts_extra %}{% endblock %}
 
