@@ -14,7 +14,6 @@
 
 
 {% block content %}
-{% if item.type === 'photography' %}
   <div class="photo-story">
     <div class="content-wrapper slider-view">
       <div class="left-content-block col-12 md-col-5 lg-col-4">
@@ -49,26 +48,4 @@
       </div>
     </div>
   </div>
-{% elseif item.type === 'painting' %}
-  <div class="painting-collection">
-    <div class="flex">
-      <div class="copy-container col-2 pr2 pt2">
-        <div class="header">
-          <h3>{{item.name}}</h3>
-        </div>
-        <p>{{item.story_description}}</p>
-      </div>
-      <div class="collection-container col-10">
-        {% for image in item.gallery %}
-          <div class="collection-image-container height-100 inline-block mr2">
-            <img class="collection-image height-100 inline-block" src="{{ image.url}}">
-            <div class="image-caption">
-              <p>{{image.caption}}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-{% endif %}
 {% endblock %}
