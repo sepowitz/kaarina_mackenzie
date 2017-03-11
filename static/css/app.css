@@ -1007,6 +1007,7 @@ body {
     float: left;
     height: 30vh;
     margin: 0.5rem;
+    padding: 0;
   }
   .photo-story .content-wrapper.grid-view .gallery-container .story-image-container .story-image {
     height: 100%;
