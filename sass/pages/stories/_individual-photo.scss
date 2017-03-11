@@ -18,27 +18,71 @@
     @media (min-width: $md) {
       display: flex;
       &.slider-view {/* Horizontal slider view */
-        .copy-container {
-          @media (min-width: $md) {
-            margin-left: 5%;
-            padding-right: 2rem;
-            background-color: color('white');
-            margin-left: 20%;
+        &.vertical {
+          .left-content-block {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            .copy-container {
+              @media (min-width: $md) {
+                height: 100%;
+                margin-top: 10vh;
+                margin-left: 0;
+                padding-right: 2rem;
+                padding-left: 15%;
+                background-color: color('white');
+              }
+            }
+          }
+
+          .gallery-container {
+            @media (min-width: $md) { margin-left: 41.66667%; }
+            @media (min-width: $lg ) { margin-left: 33.33333%; }
+            .story-image-container {
+              position: relative;
+              height: auto;
+              width: 40vw;
+              padding-bottom: 4rem;
+              .story-image {
+                height: 50%;
+                width: 90%;
+              }
+              .caption {
+                line-height: 1.8rem;
+                font-weight: 200;
+                font-size: 1rem;
+                position: absolute;
+                right: -100px;
+                bottom: 100px;
+              }
+            }
           }
         }
-        .gallery-container {
-          height: 88vh;
-          overflow: auto;
-          white-space: nowrap;
-          .story-image-container {
-            width: auto;
-            height: 100%;
-            display: inline-block;
-            margin-right: 1rem;
-            .story-image {
-              display: inline-block;
+        &.horizontal {
+          .copy-container {
+            @media (min-width: $md) {
+              margin-left: 5%;
+              padding-right: 2rem;
+              background-color: color('white');
+              margin-left: 20%;
+            }
+          }
+
+          .gallery-container {
+            height: 88vh;
+            overflow: auto;
+            white-space: nowrap;
+            .story-image-container {
               width: auto;
-              height: 99%;
+              height: 100%;
+              display: inline-block;
+              margin-right: 1rem;
+              .story-image {
+                display: inline-block;
+                width: auto;
+                height: 99%;
+              }
             }
           }
         }
@@ -47,7 +91,6 @@
       &.grid-view { /* Standard grid view */
         min-height: 90vh;
         .left-content-block {
-
           position: fixed;
           left: 0;
           bottom: 0;

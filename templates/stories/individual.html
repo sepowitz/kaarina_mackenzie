@@ -15,7 +15,7 @@
 
 {% block content %}
   <div class="photo-story">
-    <div class="content-wrapper slider-view">
+    <div class="content-wrapper slider-view {% if item.type === 'painting'%} vertical {% elseif item.type === 'photography' or 'work' %} horizontal {% endif %}">
       <div class="left-content-block col-12 md-col-5 lg-col-4">
         <div class="copy-container">
           <div class="header pb1">
@@ -39,10 +39,11 @@
       </div>
       <div class="gallery-container md-col-10">
         {% for image in item.gallery %}
-          <div class="story-image-container grid-item py1">
+          <div class="story-image-container grid-item p1">
             <a href={{image.url}} class="lightbox">
               <img class="story-image" src="{{ image.url}}">
             </a>
+            <h5 class="caption">{{ image.caption|safe }}</h5>
           </div>
         {% endfor %}
       </div>

@@ -1,6 +1,7 @@
 
 {% set photos = cms.stories|where('type', 'photography') %}
 {% set paintings = cms.stories|where('type', 'painting') %}
+{% set works = cms.stories|where('type', 'work') %}
 
 <header class="siteheader bg-white">
   <div class="col-11 mx-auto">
@@ -37,12 +38,9 @@
           <h4 class="nav-item m0 align-middle sans-light">Work</h4>
           <div class="dropdown absolute pt1 bg-white">
             <ul>
-              <li>Burma</li>
-              <li>Bhutan</li>
-              <li>Beijing</li>
-              <li>Colombia</li>
-              <li>Shangri La</li>
-              <li>Shanghai</li>
+              {% for work in works %}
+                <li><a href="{{url(work)}}">{{work.name}}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
