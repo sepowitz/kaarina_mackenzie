@@ -651,6 +651,10 @@ body {
   cursor: url(/static/images/icon-arrow_right.png), auto !important;
 }
 
+#swipebox-slider .slide img {
+  max-height: 80% !important;
+}
+
 .siteheader {
   z-index: 1;
   position: fixed;
