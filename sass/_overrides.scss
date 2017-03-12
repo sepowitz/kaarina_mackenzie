@@ -1,6 +1,6 @@
 /* Swipe Box */
 #swipebox-overlay {
-  background-color: white !important;
+  background-color: black !important;
 }
 
 #swipebox-close {
@@ -8,7 +8,7 @@
   height: 40px !important;
   top: 10px !important;
   right: 10px !important;
-  background-image: url(/static/images/ex-icon.png) !important;
+  background-image: url(/static/images/icon-white_ex.png) !important;
   background-size: 50% !important;
   background-position: 50% 50% !important;
 }
@@ -23,7 +23,7 @@
       left: 0;
       width: 50%;
       height: 100%;
-      &:hover { cursor: url(/static/images/left-arrow-icon.png), auto !important; }
+      &:hover { cursor: url(/static/images/icon-arrow_left.png), auto !important; }
     }
 
     #swipebox-next {
@@ -31,7 +31,7 @@
       right: 0;
       width: 50%;
       height: 100%;
-      &:hover { cursor: url(/static/images/right-arrow-icon.png), auto !important; }
+      &:hover { cursor: url(/static/images/icon-arrow_right.png), auto !important; }
     }
   }
 }

@@ -4,7 +4,7 @@ var $navTrigger = $('.js_nav-trigger');
 var $body = $('body');
 
 (function($) {
-  $('.lightbox').swipebox();
+  $('.lightbox').swipebox()
 })($);
 
 $('.dropdown-trigger').hover(function(){

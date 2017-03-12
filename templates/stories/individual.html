@@ -40,7 +40,7 @@
       <div class="gallery-container md-col-10">
         {% for image in item.gallery %}
           <div class="story-image-container grid-item p1">
-            <a href={{image.url}} class="lightbox">
+            <a href={{image.url}} class="lightbox ">
               <img class="story-image" src="{{ image.url}}">
             </a>
             <h5 class="caption">{{ image.caption|safe }}</h5>

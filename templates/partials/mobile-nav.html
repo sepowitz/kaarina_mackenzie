@@ -1,5 +1,6 @@
 {% set photos = cms.stories|where('type', 'photography') %}
 {% set paintings = cms.stories|where('type', 'painting') %}
+{% set works = cms.stories|where('type', 'work') %}
 
 <div class="mobile-nav">
   <!-- Scroll Container -->
@@ -20,13 +21,13 @@
     </div>
 
     <div class="my4">
-      <h2 class="center mb1">PHOTOGRAPHY</h2>
+      <h2 class="center mb1">PAINTINGS</h2>
       <div class="nav-section mx-auto col-10 flex">
-        {% for photo in photos %}
+        {% for painting in paintings %}
           <div class="nav-section-wrapper pb2 col-4 flex">
-            <a href="{{url(photo)}}">
-              <img src="{{ photo.display_image|imageCrop(100, 100) }}" />
-              <h5 class="center">{{photo.name}}</h5>
+            <a href="{{url(painting)}}">
+              <img src="{{ painting.display_image|imageCrop(100, 100) }}" />
+              <h5 class="center">{{painting.name}}</h5>
             </a>
           </div>
         {% endfor %}
@@ -34,17 +35,23 @@
     </div>
 
     <div class="my4">
-      <h2 class="center mb1">PHOTOGRAPHY</h2>
+      <h2 class="center mb1">WORK</h2>
       <div class="nav-section mx-auto col-10 flex">
-        {% for photo in photos %}
+        {% for work in works %}
           <div class="nav-section-wrapper pb2 col-4 flex">
-            <a href="{{url(photo)}}">
-              <img src="{{ photo.display_image|imageCrop(100, 100) }}" />
-              <h5 class="center">{{photo.name}}</h5>
+            <a href="{{url(work)}}">
+              <img src="{{ work.display_image|imageCrop(100, 100) }}" />
+              <h5 class="center">{{work.name}}</h5>
             </a>
           </div>
         {% endfor %}
       </div>
+    </div>
+
+    <div class="my4">
+      <a href="/contact">
+        <h2 class="center mb1">CONTACT</h2>
+      </a>
     </div>
 
   </div>
