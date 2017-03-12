@@ -604,6 +604,14 @@ body {
   }
 }
 
+.loading {
+  opacity: 0;
+  transition: 100ms ease-in-out;
+}
+.loading.loaded {
+  opacity: 1;
+}
+
 /* Swipe Box */
 #swipebox-overlay {
   background-color: black !important;
@@ -971,10 +979,15 @@ body {
 }
 @media (min-width: 52em) and (min-width: 52em) {
   .photo-story .content-wrapper.slider-view.horizontal .copy-container {
+    position: absolute;
     margin-left: 5%;
     padding-right: 2rem;
     background-color: #ffffff;
     margin-left: 20%;
+    bottom: 120px;
+  }
+  .photo-story .content-wrapper.slider-view.horizontal .copy-container .header {
+    padding-bottom: 4rem;
   }
 }
 @media (min-width: 52em) {
@@ -1007,12 +1020,17 @@ body {
 }
 @media (min-width: 52em) and (min-width: 52em) {
   .photo-story .content-wrapper.grid-view .left-content-block .copy-container {
-    height: 100%;
-    margin-top: 10vh;
+    bottom: 139px;
+    position: absolute;
     margin-left: 0;
     padding-right: 2rem;
     padding-left: 15%;
     background-color: #ffffff;
+  }
+}
+@media (min-width: 52em) {
+  .photo-story .content-wrapper.grid-view .left-content-block .copy-container .header {
+    padding-bottom: 4rem;
   }
 }
 @media (min-width: 52em) and (min-width: 52em) {

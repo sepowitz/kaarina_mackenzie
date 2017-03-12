@@ -33,3 +33,12 @@ body {
     margin-top: 10vh;
   }
 }
+
+.loading {
+  opacity: 0;
+  transition: 100ms ease-in-out;
+
+  &.loaded {
+    opacity: 1;
+  }
+}

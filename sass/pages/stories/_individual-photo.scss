@@ -62,10 +62,16 @@
         &.horizontal {
           .copy-container {
             @media (min-width: $md) {
+              position: absolute;
               margin-left: 5%;
               padding-right: 2rem;
               background-color: color('white');
               margin-left: 20%;
+              bottom: 120px;
+
+              .header {
+                padding-bottom: 4rem;
+              }
             }
           }
 
@@ -97,12 +103,17 @@
           top: 0;
           .copy-container {
             @media (min-width: $md) {
-              height: 100%;
-              margin-top: 10vh;
+              // height: 100%;
+              // margin-top: 10vh;
+              bottom: 139px;
+              position: absolute;
               margin-left: 0;
               padding-right: 2rem;
               padding-left: 15%;
               background-color: color('white');
+            }
+            .header {
+              padding-bottom: 4rem;
             }
           }
         }

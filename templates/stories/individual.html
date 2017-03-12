@@ -16,12 +16,12 @@
 {% block content %}
   <div class="photo-story">
     <div class="content-wrapper slider-view {% if item.type === 'painting'%} vertical {% elseif item.type === 'photography' or 'work' %} horizontal {% endif %}">
-      <div class="left-content-block col-12 md-col-5 lg-col-4">
+      <div class="left-content-block col-12 md-col-5 lg-col-4 relative">
         <div class="copy-container">
-          <div class="header pb1">
+          <p class="description">{{item.story_description}}</p>
+          <div class="header pt1">
             <h3>{{item.name}}</h3>
           </div>
-          <p>{{item.story_description}}</p>
           <div class="icon-container">
             <div class="js_grid-trigger grid-icon pointer">
               <div class="t-left-block"></div>
@@ -41,7 +41,7 @@
         {% for image in item.gallery %}
           <div class="story-image-container grid-item p1">
             <a href={{image.url}} class="lightbox ">
-              <img class="story-image" src="{{ image.url}}">
+              <img class="story-image loading" src="{{ image.url}}">
             </a>
             <h5 class="caption">{{ image.caption|safe }}</h5>
           </div>
